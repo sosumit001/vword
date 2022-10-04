@@ -4,15 +4,19 @@ import { Route,Routes } from 'react-router-dom';
 import Header from './components/Header/Header';
 import TextControl from './components/textControl';
 import Profile from './components/profile/Profile';
+
 function App() {
 
+
+
+  
  
   return (
    
+
    <div className='App'>
-   <Header/>
+  <Header/>
     <Routes>
-      <Route path='/' element = {<Header/>}/>
       <Route path='/build' element={<TextControl/>}/>
       <Route path='/profile' element={<Profile/>}/>
       <Route path='/search' element={<div>hello</div>}/>

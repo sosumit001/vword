@@ -4,7 +4,7 @@ import './UserAuth.css';
 import Button from "./Button";
 import { signUp,logIn,useAuth,logOut } from "..";
 
-const UserAuth = () => {
+const UserAuth = (props) => {
     const [loading,setLoading] = useState(false)
     const currentUser = useAuth();
 
@@ -89,7 +89,7 @@ const UserAuth = () => {
     
 
     return(
-        <div ref={userAuthForm} id = "userAuthForm" >
+        <div ref = {userAuthForm} id = "userAuthForm" >
              <p style={{color:"black"}}>you are logged in as : <b>{setUserName(currentUser?.email)}</b></p>
           <div className="inputBox">
           <Input inputRef = {emailRef} inputType = "email" inputPlaceName="username"></Input>

@@ -17,8 +17,8 @@ import textEditIcon from './icons/text-edit.svg';
 
  const TextControl = () => {
 
+ 
     
-    document.querySelector('.Header').style.display = 'none';
     const [defaltFontSyle,setFontStyle] = useState({color:'black',size:16});
     const textEditIconRef = useRef();
     const coverDisplayText = useRef();
@@ -96,7 +96,7 @@ import textEditIcon from './icons/text-edit.svg';
 
         <> {/* input Box  */}
         
-       <Arrow To = '/'/>
+       
         <div id="writePostPage">
         {/* <Button onWriteBtnClick = {downloadImg} W = '80px' value = 'download'/> */}
         <Input inputId = "inputBox"></Input>

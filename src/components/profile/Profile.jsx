@@ -10,7 +10,9 @@ import UserAuth from "../UserAuth";
 
 
 const Profile = () => {
-   document.querySelector('.Header').style.display = 'flex';
+   
+
+
    const username = 'anomyns@123';
    const userLoginForm = document.getElementById('userAuthForm');
    const profileContainer = useRef();

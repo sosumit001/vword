@@ -14,7 +14,7 @@ import { Link } from "react-router-dom";
 // iconse
 
 const HeaderStyleSheet = {
-    position:'absolute',
+ 
     height:'24px',
     // backgroundColor:' #111',
     justifyContent:'center',

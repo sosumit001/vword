@@ -8,7 +8,7 @@
     position: relative;
    
     height: 200px;
-    width: 100%;
+    width: 400px;
     margin: auto;
     display: flex;
     flex-direction: column;
@@ -16,34 +16,32 @@
     left: 0%;
     z-index: 200;  
     margin-bottom:0px ;
-    box-shadow: 0px 8px 20px 6px rgba(0, 0, 0, 0.226);
+    box-shadow: 0px 8px 200px 6px rgba(0, 0, 0, 0.226);
     
 }
 
 
 #writePostPage{
-  
-    margin:auto ;
-   
-    position: absolute;
-    top:50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+    background-image: linear-gradient(to top,rgb(255, 255, 255),rgb(236, 166, 74));
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
     flex-wrap: wrap-reverse;
-    max-width:90vw;
-    max-height: 500px;
-    margin: auto;
-    margin-top: 25px;
+    height: 90vh;
+    width:100vw;
+   
+    margin-top: 18px;
     align-items: center;
     justify-content: space-evenly;
     padding-top: 10px;
+    align-items: center;
     animation: _buildPage 200ms;
     animation-timing-function: ease-out;
-
-
-
+    gap:5px;
+    position: relative;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    
+    /* filter: brightness(50%); */
 }
 .textSpace{
     width: 300px;
@@ -142,13 +140,12 @@ box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25), inset 0px 1px 4px rgba(245, 245, 24
 } */
 
 #textDisplayContainer{
-  
+   
     position: relative;
-    top:100%;
- 
-    overflow: hidden;
-    box-shadow: 0.5px -0.5px 105px 2px rgba(128, 116, 63, 0.226);
-   background-image: linear-gradient(to top,black,rgb(250, 246, 233));
+    background-color: rgb(37, 37, 37);
+    width: 400px;
+    height: 400px;
+    box-shadow: 0.5px -0.5px 105px 2px rgba(0, 0, 0, 0.226);
     
 /* filter: brightness(0.85); */
 }
@@ -220,11 +217,12 @@ box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25), inset 0px 1px 4px rgba(245, 245, 24
     
 @keyframes _buildPage {
     0%{
-        left:25%;
-        
+        margin-top: 35px;
+        transform: scale(90%);
     }
     100%{
-        left:50%;  
+        margin-top: 18px;  
+        transform: scale(100%);
     }
 }
 
@@ -356,3 +354,30 @@ box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25), inset 0px 1px 4px rgba(245, 245, 24
         padding-top: 0px;
     }
  }
+
+ @media only screen and  (max-width:450px) {
+    #writePostPage{
+        margin-top: 17px;
+       gap:0px;
+       height: 98vh;
+       padding-left: 5px;
+    }
+    #textControlContainer{
+        width: 100vw;
+        height: 40vh;
+        box-shadow: none;
+    }
+    .fontFamilyWrapper{
+        height: 20vh;
+        top:10vh;
+    }
+    #textDisplayContainer{
+        width:350px;
+        height:340px;
+        box-shadow: none;
+    }
+
+    .img-gallery{
+        transform: scale(130%);
+    }
+   }

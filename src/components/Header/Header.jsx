@@ -76,7 +76,7 @@ const Header = () => {
        </li>
        <li>
         <Link  to = '/profile'>
-        <img src={profileF} alt="profile" title="profile" /> 
+        <img src={profileB} alt="profile" title="profile" /> 
         </Link>
        </li>
     </ul>

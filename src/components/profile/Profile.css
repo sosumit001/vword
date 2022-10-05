@@ -1,13 +1,15 @@
 .userProfileContainer{
-    display: none;
+    display: flex;
+
 }
 .userFollowerHistory{
-    width:300px;
+    position: relative;
+    min-width:80vw;
     min-height: 200px;
     background-color:rgb(252, 250, 250); 
-    animation: downToUp 2000ms ;
+    animation: downToUp 300ms ;
     animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
-    
+    margin: 40px auto;
 }
 .userFollowerStatus{
    
@@ -15,10 +17,12 @@
     background-color: rgb(241, 241, 228);
     color:#111;
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-around;
     padding: 12px 0;
-    width: 80%;
-    margin:22px auto;
+    max-width: 400px;
+    margin: 10px auto;
     
 }
 .userProfilePic{
@@ -30,19 +34,28 @@
 }
 
 #userLogOut{
-    position:absolute;
-    left:0%;
-    top:120%;
+    position: absolute;
     border:none;
     color:whitesmoke;
+    left: 90%;
+    top:10px;
+    transform: translateX(-100%);
+    
 }
 
 
 @keyframes downToUp {
     0%{
-        margin-top: 100px;
+        margin-top: 60px;
     }
     100%{
-        margin-top: 0px;
+        margin-top: 40px;
     }
 }
+
+@media only screen and  (max-width:450px) {
+   #userLogOut{
+    left: 70%;
+    transform: scale(80%);
+   }
+  }

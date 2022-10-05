@@ -34,11 +34,6 @@ import textEditIcon from './icons/text-edit.svg';
         color:defaltFontSyle.color
     }
     
-    let displayStyleSheet = {
-        width:'400px',
-        height:'400px',
-        // backgroundColor:'black'
-    }
 
     //handle text movement
    function handleTextMovement(){
@@ -74,6 +69,7 @@ import textEditIcon from './icons/text-edit.svg';
    function handleTextDisplay(){
     var textContainer = document.getElementById('addAfterEffect');
     var writeTextBtn = document.getElementById('writeButton');
+    
 
     textContainer.style.transform = "scale(1)";
     writeTextBtn.style.transform = "scale(0)";
@@ -98,11 +94,13 @@ import textEditIcon from './icons/text-edit.svg';
         
        
         <div id="writePostPage">
-        {/* <Button onWriteBtnClick = {downloadImg} W = '80px' value = 'download'/> */}
         <Input inputId = "inputBox"></Input>
+        {/* <Button onWriteBtnClick = {downloadImg} W = '80px' value = 'download'/> */}
+        <div className="inputStylecontainer">
         <TextPropsContainer setFontS = {setFontStyle}/>
+        </div>
 
-    <div onClick={()=>{textEditIconRef.current.style.display = 'none'}} id="textDisplayContainer" style={displayStyleSheet} >
+    <div onClick={()=>{textEditIconRef.current.style.display = 'none'}} id="textDisplayContainer" >
 
         <Button onWriteBtnClick = {handleTextDisplay}  W = {"20%"} C = "black" H = {"10%"} value = "write" buttonId = "writeButton"/>
 

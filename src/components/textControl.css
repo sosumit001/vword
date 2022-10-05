@@ -177,6 +177,8 @@ box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25), inset 0px 1px 4px rgba(245, 245, 24
     top:5%;
     padding: 8px;
     display: flex;
+    z-index: 3000;
+  
 }
 
 
@@ -205,7 +207,6 @@ box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25), inset 0px 1px 4px rgba(245, 245, 24
 
 #dispTextArea{
     position: relative;
-    left: -10%;
     width: 110%;
     max-height: 90px;
     margin: auto;
@@ -215,6 +216,7 @@ box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25), inset 0px 1px 4px rgba(245, 245, 24
     resize: none;
     overflow-y: hidden;
     z-index: 3000;
+    
 }
 
 
@@ -377,7 +379,7 @@ box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25), inset 0px 1px 4px rgba(245, 245, 24
     }
     #textDisplayContainer{
         width:350px;
-        height:323px;
+        height:350px;
         box-shadow: none;
     }
     .textSpace{

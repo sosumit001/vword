@@ -52,14 +52,14 @@ import textEditIcon from './icons/text-edit.svg';
     document.addEventListener('touchmove',moveTextContainer);
     document.addEventListener('touchend',removeTextMovement);
    
-    function moveTextContainer({movementX,movementY}){
+    function moveTextContainer({movementY}){
         coverDisplayText.current.style.border =" 1px solid grey";
         let getStyle = window.getComputedStyle(coverDisplayText.current);
 
-        var left = parseInt(getStyle.left);
+       
         var top = parseInt(getStyle.top);
        
-        coverDisplayText.current.style.left = `${movementX + left}px`;
+      
         coverDisplayText.current.style.top = `${movementY + top}px`;
 
     }
@@ -111,8 +111,8 @@ import textEditIcon from './icons/text-edit.svg';
             <span style={_displayFontStyle}  className="enableTextBoundary" id="dispTextArea">
             </span>
 
-           <div id ="tControlIcons">
-            <img ref={textEditIconRef} id="textEditIcon" style={{"display":"none"}} onClick={handleTextDisplay} width='30' src={textEditIcon} alt="edit" />
+           <div ref={textEditIconRef} id ="tControlIcons">
+            <img  id="textEditIcon" style={{"display":"none"}} onClick={handleTextDisplay} width='30' src={textEditIcon} alt="edit" />
             </div>
 
          </div>

@@ -42,7 +42,9 @@
     transform: scale(80%);
    
 }
-
+#tControlIcons{
+  display: none;
+}
 .build-icon{
     height : 35px;
     width : 45px;

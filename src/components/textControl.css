@@ -33,20 +33,16 @@
     flex-direction: row;
     flex-wrap: wrap-reverse;
     max-width:90vw;
-    max-height: 600px;
+    max-height: 500px;
     margin: auto;
-   
+    margin-top: 25px;
     align-items: center;
     justify-content: space-evenly;
     padding-top: 10px;
     animation: _buildPage 200ms;
     animation-timing-function: ease-out;
 
-   
-    background-position:center;
-    background-repeat: no-repeat;
-    background-size: cover;
-   
+
 
 }
 .textSpace{
@@ -146,10 +142,13 @@ box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25), inset 0px 1px 4px rgba(245, 245, 24
 } */
 
 #textDisplayContainer{
-    margin: 5px;
+  
     position: relative;
+    top:100%;
+ 
     overflow: hidden;
-    background-color: rgba(0, 0, 0, 0.274);
+    box-shadow: 0.5px -0.5px 105px 2px rgba(128, 116, 63, 0.226);
+   background-image: linear-gradient(to top,black,rgb(250, 246, 233));
     
 /* filter: brightness(0.85); */
 }

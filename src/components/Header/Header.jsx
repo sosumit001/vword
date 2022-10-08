@@ -1,11 +1,12 @@
 import React from "react";
 import './Header.css'
 
-import homeF from './navicons/homeFront.svg';
-import homeB from './navicons/homeBack.svg';
+import homeB from './navicons/homeFront.svg';
+import homeF from './navicons/homeBack.svg';
 
-import profileF from './navicons/profileFront.svg';
+
 import profileB from './navicons/profileBack.svg';
+import profileF from './navicons/profileFront.svg'
 
 import { useState,useRef } from "react";
 import { Link } from "react-router-dom";
@@ -28,14 +29,25 @@ const Header = () => {
     
     const [isHClicked,setHClicked] = useState(true);
     const [isBCliced,setIsBClicked] = useState(false);
+    const [isPClicked,setIsPClicked] = useState(false);
     
 
     const buildRef = useRef();
     const toggleClass =['upper-build-part','lower-build-part']
  
+   
+  
+    function handleHomeIcon(){
+        if(!isHClicked)setHClicked(true)
+        if(isPClicked) setIsPClicked(false);
+        if(isBCliced) setIsBClicked(false)
+        var buildIcons = document.querySelectorAll('#build-part');
+        buildIcons.forEach((e,i)=>{
+            e.style = 'margin-left:45%'
+            e.removeAttribute('class')
+        }) 
+    }
     function handleBuildIcon(){
-
-        const HomeIcon = document.querySelector('#vWordLogo');
         var buildIcons = document.querySelectorAll('#build-part');
         if(!isBCliced)
         {
@@ -48,8 +60,8 @@ const Header = () => {
            setTimeout(() => {
             setIsBClicked(true)
             setHClicked(false);
-            
-
+            setIsPClicked(false);
+          
            }, 300);
         }
         if(isBCliced)
@@ -63,16 +75,32 @@ const Header = () => {
             setTimeout(() => {
                 setIsBClicked(false)
                 setHClicked(true);
-                
+               
+
             }, 300);
         }
+    }
+    function handleProfileIcon(){
+        if(!isPClicked) setIsPClicked(true);
+        if(isHClicked) setHClicked(false);
+
+        if(isBCliced) setIsBClicked(false)
+        var buildIcons = document.querySelectorAll('#build-part');
+        buildIcons.forEach((e,i)=>{
+            e.style = 'margin-left:45%'
+            e.removeAttribute('class')
+        }) 
     }
 
     return <>
     <ul style={HeaderStyleSheet} className="Header">
-        <li> <img src={(isHClicked)?homeB:homeF} alt="home" title="home" /> </li>
+        <li onClick={handleHomeIcon}> 
+            <Link to={'/'}>
+            <img src={(isHClicked)?homeF:homeB} alt="home" title="home" /> 
+            </Link>
+        </li>
        <li onClick={handleBuildIcon}>
-        <div ref={buildRef}  className = 'build-icon'>
+        <div style={(isBCliced)?{"background":"white"}:{"background":"#D9D9D9"}} ref={buildRef}  className = 'build-icon'>
   <Link to= {(!isBCliced)?'/build':'/'} >
   <div id = 'build-part'></div>
     <div className = 'middle-build-part'></div>
@@ -82,7 +110,7 @@ const Header = () => {
        </li>
        <li>
         <Link  to = '/profile'>
-        <img src={profileB} alt="profile" title="profile" /> 
+        <img onClick={handleProfileIcon} src={(!isPClicked)?profileB:profileF} alt="profile" title="profile" /> 
         </Link>
        </li>
     </ul>

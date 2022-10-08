@@ -41,7 +41,7 @@ const Profile = () => {
     <div ref={profileContainer} className="userProfileContainer">
    
         <div className="userFollowerHistory moblieFollowerHistory">
-        <Button onWriteBtnClick = {handleLogOut} value = "Log out" buttonId = "userLogOut" C = "#111" W = "70px" H = "40px"/>
+        <Button bgColor="#111" onWriteBtnClick = {handleLogOut} value = "Log out" buttonId = "userLogOut" C = "#111" W = "70px" H = "40px"/>
             <div className="userNameContainer">
                 <div className="userProfilePic"></div>
                 <span id="userDisplayName">{username}</span>

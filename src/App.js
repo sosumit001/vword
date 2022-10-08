@@ -4,6 +4,7 @@ import { Route,Routes } from 'react-router-dom';
 import Header from './components/Header/Header';
 import TextControl from './components/textControl';
 import Profile from './components/profile/Profile';
+import Home from './components/Home';
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
    <div className='App'>
   <Header/>
     <Routes>
+      <Route path='/' element = {<Home/>}></Route>
       <Route path='/build' element={<TextControl/>}/>
       <Route path='/profile' element={<Profile/>}/>
       <Route path='/search' element={<div>hello</div>}/>

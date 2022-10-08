@@ -4,6 +4,7 @@ const Button = (props) => {
 
     function handleButtonStructure(C,W,H){
         const bStyleSheet = {
+            
             "width":W,
             "height":H,
             "backgroundColor":C,
@@ -13,7 +14,7 @@ const Button = (props) => {
     
     return(
         <>
-        <button disabled = {props.btnDisable}  onClick={props.onWriteBtnClick} id={props.buttonId} style={handleButtonStructure(props.C,props.W,props.H)}>{props.value}</button>
+        <button disabled = {props.btnDisable}  onClick={props.onWriteBtnClick} id={props.buttonId} style={handleButtonStructure(props.bgColor,props.W,props.H)}>{props.value}</button>
         </>
     )
 }

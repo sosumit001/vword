@@ -1,4 +1,5 @@
 import React,{useEffect,useState,useRef} from "react";
+import html2canvas from "html2canvas";
 import { Link } from "react-router-dom";
 import '../components/textControl.css'
 
@@ -76,16 +77,17 @@ import textEditIcon from './icons/text-edit.svg';
   
    }
 
-//    function downloadImg(){
-//     html2canvas(document.getElementById('textDisplayContainer',{allowTaint: true})).then((canvasImg)=>{
-//         var aTag = document.createElement('a');
-//         aTag.download = `jpgImg ${Math.floor(Math.random(110))}.jpg`
-//         aTag.href = canvasImg.toDataURL('img/png',0.1);
-//         aTag.target = '_blank';
-//         aTag.click();
+   function downloadImg(){
+    html2canvas(document.getElementById('textDisplayContainer',{allowTaint: true})).then((canvasImg)=>{
+        var aTag = document.createElement('a');
+        aTag.download = `jpgImg ${Math.floor(Math.random(110))}.jpg`
+        aTag.href = canvasImg.toDataURL('img/png',0.1);
+        aTag.target = '_blank';
+        aTag.click();
+        console.log(canvasImg.toDataURL('img/png',0.1))
         
-//     })
-//    }
+    })
+   }
 
     return (
        
@@ -94,6 +96,7 @@ import textEditIcon from './icons/text-edit.svg';
         
        
         <div id="writePostPage">
+             {/* <Button value = 'download' onWriteBtnClick= {downloadImg} /> */}
         <Input inputId = "inputBox"></Input>
         {/* <Button onWriteBtnClick = {downloadImg} W = '80px' value = 'download'/> */}
         <div className="inputStylecontainer">
@@ -102,7 +105,8 @@ import textEditIcon from './icons/text-edit.svg';
 
     <div onClick={()=>{textEditIconRef.current.style.display = 'none'}} id="textDisplayContainer" >
 
-        <Button onWriteBtnClick = {handleTextDisplay}  W = {"20%"} C = "black" H = {"10%"} value = "write" buttonId = "writeButton"/>
+       
+        <Button onWriteBtnClick = {handleTextDisplay}  W = {"20%"} C = "black" H = {"10%"} bgColor="#111" value = "write" buttonId = "writeButton"/>
 
          <div onMouseLeave={()=>{
             textEditIconRef.current.style.display = 'none';
@@ -161,8 +165,8 @@ const TextPropsContainer = (props) => {
     <div ref={textContainerRef} id="textControlContainer">
 
          <div ref={displaySRef} className="displayStyles">
-         <Button  onWriteBtnClick = {handleTextD}  W = {"50%"} C = "white" H = {"100%"} value = "text" buttonId = "textStyleBtn"/>
-         <Button  onWriteBtnClick = {handleWallD}  W = {"50%"} C = "white" H = {"100%"} value = "wallpaper" buttonId = "wallpaperStyleBtn"/>
+         <Button  onWriteBtnClick = {handleTextD}  W = {"50%"} C = "white" H = {"100%"} bgColor="rgba(12,12,12,0)" value = "text" buttonId = "textStyleBtn"/>
+         <Button  onWriteBtnClick = {handleWallD}  W = {"50%"} C = "white" H = {"100%"} bgColor="rgba(12,12,12,0)" value = "wallpaper" buttonId = "wallpaperStyleBtn"/>
          </div>
 
     <TextSpace tRef = {textSpace} setFontS = {props.setFontS}/>

@@ -13,12 +13,12 @@ html{
   width:100vw;
   margin-top: 0px;
  user-select: none;
- overflow-x: hidden;
+overflow: hidden;
 }
 
 /* width */
 ::-webkit-scrollbar {
-  width: 14px;
+  width: 8px;
 }
 
 /* Track */

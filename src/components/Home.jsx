@@ -1,13 +1,13 @@
 import React from "react";
-
+import './Home.css';
+import vWordLogo from '../components/img/vwordlogoo.svg'
 
 const Home = () => {
 
     return (
-        <>
-        <h1>Vword</h1>
-        <p>Share your words</p>
-        </>
+        <div id="Home">
+        <img id="vWordLogo" alt = "v-word" src={vWordLogo} width = '300px'  />
+        </div>
     )
 }
 

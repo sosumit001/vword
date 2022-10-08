@@ -11,6 +11,7 @@ import { useState,useRef } from "react";
 import { Link } from "react-router-dom";
 
 
+
 // iconse
 
 const HeaderStyleSheet = {
@@ -33,19 +34,23 @@ const Header = () => {
     const toggleClass =['upper-build-part','lower-build-part']
  
     function handleBuildIcon(){
-      
+
+        const HomeIcon = document.querySelector('#vWordLogo');
         var buildIcons = document.querySelectorAll('#build-part');
         if(!isBCliced)
         {
-          
+            
             buildIcons.forEach((e,i)=>{
                 e.style = 'margin-left:0%'
                 e.setAttribute('class',toggleClass[i]);
+               
             })
            setTimeout(() => {
             setIsBClicked(true)
             setHClicked(false);
-           }, 100);
+            
+
+           }, 300);
         }
         if(isBCliced)
         {
@@ -58,7 +63,8 @@ const Header = () => {
             setTimeout(() => {
                 setIsBClicked(false)
                 setHClicked(true);
-            }, 100);
+                
+            }, 300);
         }
     }
 
@@ -66,13 +72,13 @@ const Header = () => {
     <ul style={HeaderStyleSheet} className="Header">
         <li> <img src={(isHClicked)?homeB:homeF} alt="home" title="home" /> </li>
        <li onClick={handleBuildIcon}>
-        <Link to = {(!isBCliced)?'/build':'/'} >
         <div ref={buildRef}  className = 'build-icon'>
+  <Link to= {(!isBCliced)?'/build':'/'} >
   <div id = 'build-part'></div>
     <div className = 'middle-build-part'></div>
   <div id = 'build-part'></div>
+  </Link>
  </div>
- </Link>
        </li>
        <li>
         <Link  to = '/profile'>

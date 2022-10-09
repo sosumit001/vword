@@ -17,7 +17,7 @@ import { Link } from "react-router-dom";
 
 const HeaderStyleSheet = {
  
-    height:'24px',
+    height:'70px',
     // backgroundColor:' #111',
     justifyContent:'center',
     zIndex:'250',
@@ -42,13 +42,19 @@ const Header = () => {
         if(isPClicked) setIsPClicked(false);
         if(isBCliced) setIsBClicked(false)
         var buildIcons = document.querySelectorAll('#build-part');
+        var buildESIcons = document.querySelectorAll('.build-s-e-btns');
         buildIcons.forEach((e,i)=>{
             e.style = 'margin-left:45%'
             e.removeAttribute('class')
         }) 
+        buildESIcons.forEach(e=>{
+            e.style.transform = 'scale(0)';
+            e.style.top = '50%';
+        }) 
     }
     function handleBuildIcon(){
         var buildIcons = document.querySelectorAll('#build-part');
+        var buildESIcons = document.querySelectorAll('.build-s-e-btns');
         if(!isBCliced)
         {
             
@@ -56,6 +62,10 @@ const Header = () => {
                 e.style = 'margin-left:0%'
                 e.setAttribute('class',toggleClass[i]);
                
+            })
+            buildESIcons.forEach(e=>{
+                e.style.transform = 'scale(1)';
+                e.style.top = '0%';
             })
            setTimeout(() => {
             setIsBClicked(true)
@@ -71,12 +81,15 @@ const Header = () => {
             buildIcons.forEach((e,i)=>{
                 e.style = 'margin-left:45%'
                 e.removeAttribute('class')
+            })
+            buildESIcons.forEach(e=>{
+                e.style.transform = 'scale(0)';
+                e.style.top = '50%';
             }) 
             setTimeout(() => {
                 setIsBClicked(false)
                 setHClicked(true);
-               
-
+                setIsPClicked(true);
             }, 300);
         }
     }
@@ -86,19 +99,27 @@ const Header = () => {
 
         if(isBCliced) setIsBClicked(false)
         var buildIcons = document.querySelectorAll('#build-part');
+        var buildESIcons = document.querySelectorAll('.build-s-e-btns');
         buildIcons.forEach((e,i)=>{
             e.style = 'margin-left:45%'
             e.removeAttribute('class')
+        }) 
+        buildESIcons.forEach(e=>{
+            e.style.transform = 'scale(0)';
+            e.style.top = '50%';
         }) 
     }
 
     return <>
     <ul style={HeaderStyleSheet} className="Header">
-        <li onClick={handleHomeIcon}> 
+    <li onClick={handleHomeIcon}> 
             <Link to={'/'}>
             <img src={(isHClicked)?homeF:homeB} alt="home" title="home" /> 
             </Link>
         </li>
+        <div className="post-btn-container build-s-e-btns">Post</div>
+        <div className="edit-btn-container build-s-e-btns">Edit</div>
+       
        <li onClick={handleBuildIcon}>
         <div style={(isBCliced)?{"background":"white"}:{"background":"#D9D9D9"}} ref={buildRef}  className = 'build-icon'>
   <Link to= {(!isBCliced)?'/build':'/'} >

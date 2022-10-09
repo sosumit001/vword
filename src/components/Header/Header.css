@@ -3,7 +3,6 @@
     list-style: none;
     gap:30%;
     width: 100%;
-    margin-top: 18px;
     --display:flex;
   background-color: black;
 }
@@ -11,7 +10,7 @@
     position: absolute;
     content:"";
     width: 50%;
-    height: 250%;
+    height: 100%;
     left: 50%;
     background-color: rgb(56, 56, 56);
    
@@ -25,7 +24,7 @@
     position: absolute;
     content:"";
     width: 50%;
-    height: 250%;
+    height: 100%;
    
     background-color: rgb(40, 39, 39);
     left: 0%;
@@ -36,7 +35,7 @@
     display: var(--display);
    }
 .Header li{
-    z-index: 2000;
+    z-index: 1900;
 }
 .Header li:last-child, .Header li:first-child{
     margin-top: 5px;
@@ -59,6 +58,7 @@
     background-color:#D9D9D9;
     transform: scale(120%);
     margin-top: 50%;
+   
    
   }
   #build-part{ 
@@ -94,6 +94,42 @@
     width:20px;
     border:1.5px solid black;
   
+  }
+
+
+  .post-btn-container{
+    position: absolute;
+    width: 40%;
+    height: 100%;
+    left: 50%;
+    top:50%;
+    background-color: rgb(56, 56, 56);
+    z-index: 190;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(222, 217, 217);
+  
+    transition: 300ms;
+    transform: scale(0);
+    
+  }
+  .edit-btn-container{
+    position: absolute;
+    width: 40%;
+    height: 100%;
+    left: 10%;
+    top:50%;
+   
+    z-index: 190;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(40, 39, 39);
+    color: rgb(222, 217, 217);
+    transition: 300ms;
+    transform: scale(0);
+
   }
 
 

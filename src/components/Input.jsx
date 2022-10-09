@@ -45,7 +45,7 @@ const Input = (props) => {
         <>
         <div id="addAfterEffect">
         <Button onWriteBtnClick = {handleCloseTextEve} H = "30px" W = "47px" C = "black" value = "done" buttonId = "closeTextBtn"/>
-        <textarea spellCheck="false" placeholder="write......" style={stylesheet}  id={props.inputId} ></textarea>
+        <textarea spellCheck="false" placeholder="write......" style={stylesheet} defaultValue = "This is how waterfalls are made"  id={props.inputId} ></textarea>
         </div>
         </>
     )

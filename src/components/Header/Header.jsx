@@ -110,6 +110,14 @@ const Header = () => {
         }) 
     }
 
+    function handleTextDisplay(){
+        var textContainer = document.getElementById('addAfterEffect');
+        var writeTextBtn = document.getElementById('writeButton');
+    
+        textContainer.style.transform = "scale(1)";
+        writeTextBtn.style.transform = "scale(0)";
+       }
+
     return <>
     <ul style={HeaderStyleSheet} className="Header">
     <li onClick={handleHomeIcon}> 
@@ -117,8 +125,8 @@ const Header = () => {
             <img src={(isHClicked)?homeF:homeB} alt="home" title="home" /> 
             </Link>
         </li>
-        <div className="post-btn-container build-s-e-btns">Post</div>
-        <div className="edit-btn-container build-s-e-btns">Edit</div>
+        <div  className="post-btn-container build-s-e-btns"><span>Post</span></div>
+        <div className="edit-btn-container build-s-e-btns"><span onClick={handleTextDisplay}>Edit</span></div>
        
        <li onClick={handleBuildIcon}>
         <div style={(isBCliced)?{"background":"white"}:{"background":"#D9D9D9"}} ref={buildRef}  className = 'build-icon'>

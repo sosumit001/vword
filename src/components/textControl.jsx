@@ -11,6 +11,7 @@ import { Image } from "./Image";
 import black_1 from './wallpapers/t-black-1.png'
 import white_2 from './wallpapers/t-white-2.png'
 import white_3 from './wallpapers/t-white-3.png'
+import night_1 from './wallpapers/t-night-1.jpg';
 //icons
 
 import textEditIcon from './icons/text-edit.svg';
@@ -20,7 +21,7 @@ import textEditIcon from './icons/text-edit.svg';
 
  
     
-    const [defaltFontSyle,setFontStyle] = useState({color:'black',size:16});
+    const [defaltFontSyle,setFontStyle] = useState({color:'rgb(231, 220, 220)',size:16});
     const textEditIconRef = useRef();
     const coverDisplayText = useRef();
 
@@ -32,7 +33,7 @@ import textEditIcon from './icons/text-edit.svg';
 
     let _displayFontStyle = {
         fontSize:defaltFontSyle.size,
-        color:defaltFontSyle.color
+        color:defaltFontSyle.color,
     }
     
 
@@ -70,7 +71,6 @@ import textEditIcon from './icons/text-edit.svg';
    function handleTextDisplay(){
     var textContainer = document.getElementById('addAfterEffect');
     var writeTextBtn = document.getElementById('writeButton');
-    
 
     textContainer.style.transform = "scale(1)";
     writeTextBtn.style.transform = "scale(0)";
@@ -106,19 +106,17 @@ import textEditIcon from './icons/text-edit.svg';
     <div onClick={()=>{textEditIconRef.current.style.display = 'none'}} id="textDisplayContainer" >
 
        
-        <Button onWriteBtnClick = {handleTextDisplay}  W = {"20%"} C = "black" H = {"10%"} bgColor="#111" value = "write" buttonId = "writeButton"/>
-
          <div onMouseLeave={()=>{
             textEditIconRef.current.style.display = 'none';
          }} onMouseOver={()=>{textEditIconRef.current.style.display = 'flex'}} ref={coverDisplayText} id="coverDisplayText"    onTouchStart={handleTextMovement} onMouseDown={handleTextMovement}>
 
             <span style={_displayFontStyle}  className="enableTextBoundary" id="dispTextArea">
-            </span>
+            there are million place in this world<br></br>
+but your heart is the only safe space I know</span>
 
            <div ref={textEditIconRef} id ="tControlIcons">
             <img  id="textEditIcon" style={{"display":"none"}} onClick={handleTextDisplay} width='30' src={textEditIcon} alt="edit" />
             </div>
-
          </div>
     </div>
 
@@ -234,7 +232,7 @@ const WallpaperSpace = (props) => {
        
         <div className="img-gallery">
             
-            <Image imgWidth = '60px' svgEle = {black_1}></Image>
+            <Image imgWidth = '60px' svgEle = {night_1}></Image>
             <Image imgWidth = '60px' svgEle = {black_1}></Image>
             <Image imgWidth = '60px' svgEle = {white_2}></Image>
             <Image imgWidth = '60px' svgEle = {white_2}></Image>

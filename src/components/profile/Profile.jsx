@@ -41,7 +41,7 @@ const Profile = () => {
     <div ref={profileContainer} className="userProfileContainer">
    
         <div className="userFollowerHistory moblieFollowerHistory">
-        <Button bgColor="#111" onWriteBtnClick = {handleLogOut} value = "Log out" buttonId = "userLogOut" C = "#111" W = "70px" H = "40px"/>
+        <Button bgColor="rgba(12, 12, 12, 0)" onWriteBtnClick = {handleLogOut} value = "Log out" buttonId = "userLogOut" C = "#111" W = "70px" H = "40px"/>
             <div className="userNameContainer">
                 <div className="userProfilePic"></div>
                 <span id="userDisplayName">{username}</span>
@@ -50,16 +50,14 @@ const Profile = () => {
             
         </div>
        
-        <div className="userRecentPosts"></div>
+        <div className="userPosts"></div>
     </div>
+
     </>
 }
 
 
 const FollowerStatus = (props) => {
-    
-    
- 
     return (
     <div id="userProfilePage"> 
         <div className="userFollowerStatus">
@@ -67,6 +65,16 @@ const FollowerStatus = (props) => {
         <span className="noOfFollowings"><b>{props.userFollowing}</b> following</span>
     </div>
     </div>
+    )
+}
+
+const usedMediaPost = () => {
+
+
+    return (
+        <div>
+
+        </div>
     )
 }
 

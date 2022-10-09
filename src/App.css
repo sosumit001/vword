@@ -9,11 +9,12 @@ html{
   position: absolute;
   text-align: center;
   background-color:beige;
-  height:100vh;
+ 
   width:100vw;
   margin-top: 0px;
+
  user-select: none;
-overflow: hidden;
+
 }
 
 /* width */

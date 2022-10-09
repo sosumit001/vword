@@ -52,8 +52,8 @@
     width:80%;
     height: 400px;
     background-color:beige;
-    box-shadow:inset 0.1px 1px 99px rgb(255, 255, 255);
-    animation: downToUp2 700ms;
+    box-shadow:inset 0.1px 1px 99px rgb(222, 222, 196);
+    animation: downToUp2 100ms;
     margin: auto;
    
 }

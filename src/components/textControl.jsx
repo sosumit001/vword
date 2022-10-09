@@ -70,10 +70,10 @@ import textEditIcon from './icons/text-edit.svg';
     // handle post text
    function handleTextDisplay(){
     var textContainer = document.getElementById('addAfterEffect');
-    var writeTextBtn = document.getElementById('writeButton');
+   
 
     textContainer.style.transform = "scale(1)";
-    writeTextBtn.style.transform = "scale(0)";
+
   
    }
 

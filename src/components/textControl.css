@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC&family=Cormorant+Upright&family=Crete+Round&family=Fenix&family=Pacifico&family=Patrick+Hand+SC&family=Red+Hat+Mono&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -14,7 +15,7 @@
     flex-direction: column;
     /* background-color: white; */
     left: 0%;
-    z-index: 200;  
+    z-index: 300;  
     margin-bottom:0px ;
     /* box-shadow: 0px 8px 200px 6px rgba(0, 0, 0, 0.226); */
     
@@ -22,17 +23,18 @@
 
 
 #writePostPage{
-    background-color:beige;
+    background-color:whitesmoke;
     display: flex;
     flex-direction: row-reverse;
     flex-wrap: wrap-reverse;
-    height: 90vh;
+    height:100vh;
     width:100vw;
    
-    margin-top: 18px;
+   
+   
     align-items: center;
     justify-content: space-evenly;
-    padding-top: 10px;
+    
     align-items: center;
     animation: _buildPage 200ms;
     animation-timing-function: ease-out;
@@ -142,7 +144,7 @@ box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25), inset 0px 1px 4px rgba(245, 245, 24
 #textDisplayContainer{
     position: relative;
     background-color: rgb(37, 37, 37);
-    background-image: url('wallpapers/t-night-1.jpg');
+    /* background-image: url('wallpapers/t-night-1.jpg'); */
     width: 400px;
     height: 400px;
     box-shadow: 0.5px -0.5px 2px 2px rgba(141, 129, 104, 0.916);

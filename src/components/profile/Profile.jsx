@@ -1,10 +1,9 @@
 import React from "react"; 
 import { useState,useRef } from "react";
 import './Profile.css'
-import Button from '../Button';
+import Button from '../Button'
 import { logOut,useAuth } from "../..";
 import UserAuth from "../UserAuth";
-
 
 
 
@@ -50,7 +49,11 @@ const Profile = () => {
             
         </div>
        
-        <div className="userPosts"></div>
+        <div className="userPosts">
+           <div>
+        
+           </div>
+        </div>
     </div>
 
     </>
@@ -68,15 +71,7 @@ const FollowerStatus = (props) => {
     )
 }
 
-const usedMediaPost = () => {
 
-
-    return (
-        <div>
-
-        </div>
-    )
-}
 
 
 export default Profile;

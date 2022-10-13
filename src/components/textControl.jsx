@@ -1,5 +1,5 @@
 import React,{useEffect,useState,useRef} from "react";
-import html2canvas from "html2canvas";
+
 import { Link } from "react-router-dom";
 import '../components/textControl.css'
 
@@ -70,24 +70,13 @@ import textEditIcon from './icons/text-edit.svg';
     // handle post text
    function handleTextDisplay(){
     var textContainer = document.getElementById('addAfterEffect');
-   
 
     textContainer.style.transform = "scale(1)";
 
   
    }
 
-   function downloadImg(){
-    html2canvas(document.getElementById('textDisplayContainer',{allowTaint: true})).then((canvasImg)=>{
-        var aTag = document.createElement('a');
-        aTag.download = `jpgImg ${Math.floor(Math.random(110))}.jpg`
-        aTag.href = canvasImg.toDataURL('img/png',0.1);
-        aTag.target = '_blank';
-        aTag.click();
-        console.log(canvasImg.toDataURL('img/png',0.1))
-        
-    })
-   }
+ 
 
     return (
        
@@ -105,7 +94,7 @@ import textEditIcon from './icons/text-edit.svg';
 
     <div onClick={()=>{textEditIconRef.current.style.display = 'none'}} id="textDisplayContainer" >
 
-       
+    <img alt="defaultImg" className="wall-rel-bg" src={night_1} style={{"width": "100%"}} />
          <div onMouseLeave={()=>{
             textEditIconRef.current.style.display = 'none';
          }} onMouseOver={()=>{textEditIconRef.current.style.display = 'flex'}} ref={coverDisplayText} id="coverDisplayText"    onTouchStart={handleTextMovement} onMouseDown={handleTextMovement}>
@@ -281,4 +270,10 @@ const FontFamily = (props) => {
 
 
 
-export default TextControl;
+
+
+export {
+    TextControl,
+  
+};
+

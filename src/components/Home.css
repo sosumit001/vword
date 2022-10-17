@@ -64,11 +64,11 @@
 
 #createPageContainer{
     position: relative;
-    left:100%;
+    display: none;
     margin: auto;
     width: 90%;
     min-height: 600px;
-    background-color:rgb(235, 237, 252);
+    background-color:rgb(202, 243, 209);
     z-index: 3200;
     transition: 500ms;
     overflow-x: hidden;

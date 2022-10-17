@@ -70,7 +70,7 @@
   margin-top: -1px;
   margin-right: 2px;
   width: 40%;
-  
+  opacity: 1;
 }
 
 .menu-bars-{
@@ -90,8 +90,10 @@
   margin-top: -25%;
 }
 .menu-bars-:nth-child(2){
+  opacity: 0;
+  margin-top: -10%;
+  width: 5%;
  
-  width: 0%;
 }
 
 
@@ -151,12 +153,17 @@
   @media only screen and (max-width:760px){
     #vwordMenu{
       display: flex;
+      
+      
     }
     #WINDOWvwordSideBar{
       display:none;
     }
     #vwordSideBar{
+      
       display: flex;
+     
+
     }
   }
   @keyframes barEle {

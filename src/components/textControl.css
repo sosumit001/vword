@@ -7,15 +7,15 @@
 
 #textControlContainer{
     position: relative;
-   
+    display: flex;
     height: 200px;
     width: 400px;
-    margin: auto;
-    display: flex;
+    
+    /* display: flex; */
     flex-direction: column;
     /* background-color: white; */
     left: 0%;
-    z-index: 300;  
+    z-index: 3400;  
     margin-bottom:0px ;
     /* box-shadow: 0px 8px 200px 6px rgba(0, 0, 0, 0.226); */
     
@@ -23,27 +23,21 @@
 
 
 #writePostPage{
-    background-color:whitesmoke;
+   
+    margin: auto;
+    min-height: 500px;
+    width:90%;
+  
+ 
+   
     display: flex;
-    flex-direction: row-reverse;
     flex-wrap: wrap-reverse;
-    height:100vh;
-    width:100vw;
-   
-   
-   
     align-items: center;
-    justify-content: space-evenly;
-    
-    align-items: center;
-    animation: _buildPage 200ms;
-    animation-timing-function: ease-out;
-    gap:5px;
-    position: relative;
-    overflow-y:auto;
+    justify-content: center;
+    justify-content: space-around;
+    overflow-y: scroll;
     overflow-x: hidden;
-    
-    /* filter: brightness(50%); */
+ 
 }
 .textSpace{
     width: 300px;
@@ -142,16 +136,15 @@ box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25), inset 0px 1px 4px rgba(245, 245, 24
 } */
 
 #textDisplayContainer{
-    position: relative;
+   
     background-color: rgb(37, 37, 37);
-    /* background-image: url('wallpapers/t-night-1.jpg'); */
     width: 400px;
     height: 400px;
-    box-shadow: 0.5px -0.5px 2px 2px rgba(141, 129, 104, 0.916);
+   
     background-position: center;
     background-size: 100%;
     overflow: hidden;
-    border: 3px solid rgba(248, 245, 219, 0.834);
+    transform: scale(1.2);
    
 /* filter: brightness(0.85); */
 }
@@ -246,49 +239,6 @@ box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25), inset 0px 1px 4px rgba(245, 245, 24
 
 
 
-
-/* arrow */
-.goToHome {
-    position: absolute;
-    top:5%;
-    left: 25px;
-    width:60px;
-    height:40px;
-    display:flex;
-    align-items:center;
-    z-index: 202;
-  }
-  .arrow-head{
-    height:80%;
-    width:20px;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    gap:13px;
-  
-  }
-  .arrow-head div{
-    height:2px;
-    width:130%;
-    background:rgb(138, 53, 4); 
-   
-  }
-  .arrow-head :first-child{
-    margin-left: 2px;
-    transform :rotate(-36deg)
-  }
-  .arrow-head :last-child{
-    transform :rotate(36deg)
-  }
-  .arrow-line{
-    height:1px;
-    width:100%;
-    background-color:rgb(88, 79, 79);
-    margin-left:-20px;
-    
-  }
-
   .displayStyles{
    position: relative;
    height: 40px;
@@ -378,11 +328,12 @@ box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25), inset 0px 1px 4px rgba(245, 245, 24
     }
  }
 
- @media only screen and  (max-width:450px) {
+ @media only screen and  (max-width:600px) {
     #writePostPage{
+       
        gap:0px;
-       height: 98vh;
-       width: 100vw;
+       height: 95%;
+       
     }
     #textControlContainer{
         height: 40vh;
@@ -394,9 +345,11 @@ box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25), inset 0px 1px 4px rgba(245, 245, 24
         top:7vh;
     }
     #textDisplayContainer{
-        width:350px;
-        height:350px;
+        width:330px;
+        height:330px;
         box-shadow: none;
+        border: none;
+        transform: scale(0.9);
     }
     .textSpace{
         margin-top: 3px;
@@ -404,6 +357,11 @@ box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25), inset 0px 1px 4px rgba(245, 245, 24
 
     .img-gallery{
         transform: scale(130%);
+    }
+   }
+   @media only screen and  (600px < width < 1000px){
+    #textDisplayContainer{
+        transform: scale(1);
     }
    }
 

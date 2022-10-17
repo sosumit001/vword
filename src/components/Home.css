@@ -23,24 +23,29 @@
 }
 #Home{
     width: 100%;
-    min-height: 100vh;
+    
     position: relative;
     min-height: 100vh;
     --top:90%;
     display:flex;
     flex-direction: row-reverse;
-   
+    --HomeB: brightness(100%);
+    filter: var(--HomeB);
+    background-color: blue;
+    overflow: hidden;
 }
 #vwordIntroPage{
     width: 100%;
-    height: 100vh;
-    
+    min-height: 100%;
+    position: absolute;
+    overflow: scroll;
     background-color: whitesmoke;
     background-image: url('https://images.unsplash.com/photo-1579641213755-d2d0402abb9a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1034&q=80');
     background-repeat: no-repeat;
     background-size:cover;
     background-position: center;
     box-shadow: inset 20px -40px 95px rgba(11, 37, 94, 0.959);
+    overflow-y: scroll;
 }
 #vWordLC{
    
@@ -56,15 +61,52 @@
 
 
 /* create post page */
-#createPostPage{
-    position: absolute;
-   
-    left: 100%;
-    width: 100%;
-    min-height: 100vh;
-    background-color:whitesmoke;
+
+#createPageContainer{
+    position: relative;
+    left:100%;
+    margin: auto;
+    width: 90%;
+    min-height: 600px;
+    background-color:rgb(235, 237, 252);
     z-index: 3200;
     transition: 500ms;
+    overflow-x: hidden;
+  
+}
+#createWriteDisplay{
+    left: 100%;
+    position: absolute;
+    top:50px;
+    width: 100%;
+    height: 91.69%;
+    background-color:rgb(2, 2, 2);
+    z-index: 3900;
+   
+}
+/* c_pageNavigator */
+#c_pageNavigator{
+    position:sticky;
+    top:0%;
+    left:5%;
+    height: 50px;
+    width: 90%;
+    display: flex;
+    gap:30%;
+    align-items: center;
+    justify-content: center;
+    z-index: 4000;
+}
+#c_pageNavigator h3{
+    font-family:Crete Round, 'Courier New', Courier, monospace;
+}
+
+
+/* template */
+#cdHeader{
+    height: 50px;
+    width: 100%;
+    background-color: rgb(201, 187, 187);
 }
 
 @keyframes animate-logo {
@@ -83,6 +125,10 @@
     }
 }
 @media only screen and  (max-width:450px){
+    #createPageContainer{
+        margin: auto;
+        width: 98%;
+    }
     #vWordLogo{
        transform: scale(70%);
     }
@@ -92,7 +138,11 @@
     }
 
 }
-@media only screen and  (max-width:750px){
+@media only screen and  (450px < width < 750px){
+#createPageContainer{
+    margin: auto;
+    width: 80%;
+}
     #vWordSlogn {
         top:40%;
         font-size: 1.5rem;

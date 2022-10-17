@@ -30,29 +30,32 @@ const Header = () => {
 
    function handleSideBar(e){
     var bars = document.querySelectorAll('#vwordMenu div');
+    var Home = document.getElementById('Home');
     if(!vMenuClick)
     {
+        if(Home) Home.style = '--HomeB:brightness(50%)';
         refBar.current.style.cssText = "left:-25%";
-        bars.forEach((e,k)=>{
-           e.removeAttribute('class');
-           e.setAttribute('class','menu-bars-')
-        })
 
         setTimeout(() => {
-            setVMenuclicked(true)
-        }, 200);
+            bars.forEach((e,k)=>{
+                e.removeAttribute('class');
+                e.setAttribute('class','menu-bars-')
+             });
+            setVMenuclicked(true);
+        }, 50);
     }
     else
     {
+        if(Home) Home.style = '--HomeB:brightness(100%)';
         refBar.current.style.cssText = "left:-450%";
-        bars.forEach((e,k)=>{
-            e.removeAttribute('class');
-            e.setAttribute('class','menu-bars')
-         })
 
         setTimeout(() => {
-            setVMenuclicked(false)
-        }, 200);
+            bars.forEach((e,k)=>{
+                e.removeAttribute('class');
+                e.setAttribute('class','menu-bars')
+             });
+            setVMenuclicked(false);
+        }, 50);
     }
    }
   

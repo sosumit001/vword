@@ -86,7 +86,7 @@ import textEditIcon from './icons/text-edit.svg';
        
         <div id="writePostPage">
              {/* <Button value = 'download' onWriteBtnClick= {downloadImg} /> */}
-        <Input inputId = "inputBox"></Input>
+       
         {/* <Button onWriteBtnClick = {downloadImg} W = '80px' value = 'download'/> */}
         <div className="inputStylecontainer">
         <TextPropsContainer setFontS = {setFontStyle}/>
@@ -94,7 +94,7 @@ import textEditIcon from './icons/text-edit.svg';
 
     <div onClick={()=>{textEditIconRef.current.style.display = 'none'}} id="textDisplayContainer" >
 
-    <img alt="defaultImg" className="wall-rel-bg" src={night_1} style={{"width": "100%"}} />
+    <img alt="defaultImg" className="wall-rel-bg"  style={{"width": "100%"}} />
          <div onMouseLeave={()=>{
             textEditIconRef.current.style.display = 'none';
          }} onMouseOver={()=>{textEditIconRef.current.style.display = 'flex'}} ref={coverDisplayText} id="coverDisplayText"    onTouchStart={handleTextMovement} onMouseDown={handleTextMovement}>

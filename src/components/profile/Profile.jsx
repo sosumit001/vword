@@ -49,11 +49,7 @@ const Profile = () => {
             
         </div>
        
-        <div className="userPosts">
-           <div>
-        
-           </div>
-        </div>
+     
     </div>
 
     </>

@@ -25,7 +25,7 @@ const Header = () => {
  
    const linkStyle = {
     "textDecoration":"none",
-    "color":"#111",
+     "color":"white"
    }
 
    function handleSideBar(e){
@@ -33,8 +33,8 @@ const Header = () => {
     var Home = document.getElementById('Home');
     if(!vMenuClick)
     {
-        if(Home) Home.style = '--HomeB:brightness(50%)';
-        refBar.current.style.cssText = "left:-25%";
+        if(Home) Home.style = '--HomeB:grayscale(100%)';
+        refBar.current.style.cssText = "transform: rotate(0deg);"
 
         setTimeout(() => {
             bars.forEach((e,k)=>{
@@ -47,7 +47,7 @@ const Header = () => {
     else
     {
         if(Home) Home.style = '--HomeB:brightness(100%)';
-        refBar.current.style.cssText = "left:-450%";
+        refBar.current.style.cssText = "transform: rotate(90deg);"
 
         setTimeout(() => {
             bars.forEach((e,k)=>{
@@ -77,20 +77,22 @@ const Header = () => {
 
     return <>
     <ul className="Header">
-        <div ref = {refBar} id="vwordSideBar">
-            <div className='nav-icon-link'><Link style = {linkStyle}  to='/'><h3 onClick={handleSideBar} >Home</h3></Link></div>
-            <div className='nav-icon-link'><Link style = {linkStyle}  to='/profile'><h3 onClick={handleSideBar} >Profile</h3></Link></div>
-            <div className='nav-icon-link'><Link style = {linkStyle}  to='/about'><h3>About</h3></Link></div>
+            <div ref = {refBar} id="vwordSideBar">
+           
+            <div className='nav-icon-link'><Link style = {linkStyle}  to='/'><h3 onClick={handleSideBar} >HOME</h3></Link></div>
+            <div className='nav-icon-link'><Link style = {linkStyle}  to='/profile'><h3 onClick={handleSideBar} >PROFILE</h3></Link></div>
+            <div className='nav-icon-link'><Link style = {linkStyle}  to='/about'><h3>ABOUT</h3></Link></div>
         </div>
-        <div  id="WINDOWvwordSideBar">
-            <div className='nav-icon-link'><Link style = {linkStyle}  to='/'><h3 onClick={handleSideBar}>Home</h3></Link></div>
-            <div className='nav-icon-link'><Link style = {linkStyle}  to='/profile'><h3 onClick={handleSideBar}>Profile</h3></Link></div>
-            <div className='nav-icon-link'><Link style = {linkStyle}  to='/about'><h3 onClick={handleSideBar}>About</h3></Link></div>
-        </div>
+      
         <div onClick={handleSideBar} id="vwordMenu">
             <div className="menu-bars"></div>
             <div className="menu-bars"></div>
             <div className="menu-bars"></div>
+        </div>
+
+        <div id="postPageIcon">
+            <div></div>
+            <div></div>
         </div>
 
     </ul>

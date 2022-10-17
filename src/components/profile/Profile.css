@@ -2,7 +2,7 @@
     display: none;
     display: flex;
     flex-direction: column;
-    background-color: rgb(211, 216, 211);
+    background-color: rgb(251, 255, 251);
     min-height: 100vh;
 }
 .userFollowerHistory{

@@ -89,13 +89,16 @@ const Header = () => {
             <div className="menu-bars"></div>
             <div className="menu-bars"></div>
         </div>
-
-        <div id="postPageIcon">
-            <div></div>
-            <div></div>
+        <div id="vwordMenu">
+            <h2>vWord </h2>
         </div>
-
+        <div id="vwordMenu">
+            <h2> </h2>
+        </div>
+        
+       
     </ul>
+  
     </>
 }
 

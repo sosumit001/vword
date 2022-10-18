@@ -4,20 +4,23 @@
   margin: 10px 50%;
   transform: translateX(-50%);
   z-index: 3001;
-  width: 98vw;
+  width: 97vw;
   display: flex;
-  justify-content: space-between
+  justify-content: space-between;
+  align-items: center;
+ 
+  background-color: rgba(255, 255, 255,0);
 }
 #vwordSideBar{
   position:absolute;
   left:-30px;
   top:60px;
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(250, 250, 250);
   border:1px solid rgb(0, 0, 0);
-  border-right: 17px solid #111;
+  
 
   height: 400px;
-  width: 180px;
+  width: 80;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -28,11 +31,9 @@
   transition: 500ms;
   z-index: 3000;
   font-size: 1.5rem;
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   letter-spacing: 2px;
-  border-top-right-radius: 10%;
-  border-bottom-right-radius: 10%;
-
+  
   transform-origin: top left;
   transform: rotate(90deg);
   
@@ -41,8 +42,8 @@
   color:black;
 }
 #vwordSideBar div h3::first-letter{
-  font-size: 3.0rem;
-  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 2.0rem;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
 }
 
@@ -116,8 +117,8 @@
 /* build-page-icon */
 
 #postPageIcon{
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 35px;
   background-color: rgba(0, 0, 0,0);
   border-top: 7px solid black;
   border-left: 2px solid black;

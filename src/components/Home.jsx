@@ -1,8 +1,8 @@
 import React from "react";
 import './Home.css';
 
-import vWordLogo from '../components/img/vwordlogoo.svg';
-import Button from "./Button";
+// import vWordLogo from '../components/img/vwordlogoo.svg';
+// import Button from "./Button";
 import Input from "./Input";
 import { useRef } from "react";
 

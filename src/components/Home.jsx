@@ -2,7 +2,7 @@ import React from "react";
 import './Home.css';
 
 // import vWordLogo from '../components/img/vwordlogoo.svg';
-// import Button from "./Button";
+import Button from "./Button";
 import Input from "./Input";
 import { useRef } from "react";
 
@@ -27,14 +27,10 @@ const Home = () => {
         <div id="vwordIntroPage">
         </div>
         <div ref={createRef} id="createPageContainer">
-            <div id="c_pageNavigator"> 
-                <span> <img style={{"transform":"rotate(180deg)"}} width={'40px'} src={NavigateArrow} alt="left "/></span>
-                <h3>Compose</h3>
-                <span> <img width={'40px'} src={NavigateArrow} alt="left "/></span>
-            </div>
             <TextControl/>
             <div id="createWriteDisplay">
             <Input/>
+            <Button value = "next" W="60px" H="40px" />
             </div>
         </div>
         </div>

@@ -66,7 +66,7 @@ const Header = () => {
     if(!vCreateClicked)
     {
         if(cPageContainer) cPageContainer.style.transform = "scale(100%)";
-        refPostIc.current.style.cssText = "transform:rotate(45deg); --PICcolor:rgb(224, 108, 0);";
+        refPostIc.current.style.cssText = "transform:rotate(45deg); --PICcolor:#555;";
       
         setTimeout(() => {
             setVCreateClicked(true);

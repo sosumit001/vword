@@ -36,15 +36,6 @@
     
 }
 
-
-/* #vwordWritePost{
-    position: relative;
-    top:20%;
-} */
-
-
-/* create post page */
-
 #createPageContainer{
     position: relative;
     display:flex;
@@ -62,32 +53,24 @@
 }
 
 #createWriteDisplay{
-    left: 100%;
+    
     position: absolute;
-    top:50px;
+    top:40%;
+
     width: 100%;
-    height: 91.69%;
-   
+    height: 99%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: rgb(255, 255, 255);
     z-index: 3900;
-   
-}
-/* c_pageNavigator */
-#c_pageNavigator{
-    position:sticky;
-    top:0%;
-    left:5%;
-    height: 50px;
-    width: 90%;
     display: flex;
-    gap:30%;
+    flex-direction: column;
+    justify-content:center;
     align-items: center;
-    justify-content: center;
-    z-index: 4000;
-}
-#c_pageNavigator h3{
-    font-family:Crete Round, 'Courier New', Courier, monospace;
+    gap:20px;
 }
 
+/* c_pageNavigator */
 
 /* template */
 #cdHeader{

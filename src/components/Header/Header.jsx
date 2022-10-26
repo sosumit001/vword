@@ -16,12 +16,14 @@ import { useRef } from "react";
 
 const Header = () => {
 
+ 
     const [vMenuClick,setVMenuclicked] = useState(false);
+    const [vCreateClicked,setVCreateClicked] = useState(false);
     const refBar = useRef();
-
-
+    const refHeader = useRef();
+    const refPostIc = useRef();
     
-
+    
  
    const linkStyle = {
     "textDecoration":"none",
@@ -58,6 +60,28 @@ const Header = () => {
         }, 50);
     }
    }
+   function createPostPage(){
+
+    let cPageContainer = document.getElementById('createPageContainer');
+    if(!vCreateClicked)
+    {
+        if(cPageContainer) cPageContainer.style.transform = "scale(100%)";
+        refPostIc.current.style.cssText = "transform:rotate(45deg); --PICcolor:rgb(224, 108, 0);";
+      
+        setTimeout(() => {
+            setVCreateClicked(true);
+        }, 300);
+    }
+    else
+    {
+        if(cPageContainer) cPageContainer.style.transform = "scale(0%)";
+        refPostIc.current.style.cssText = "transform:rotate(0deg); --PICcolor:#111;";
+        setTimeout(() => {
+            setVCreateClicked(false);
+        }, 300);
+    }
+
+   }
   
 
   
@@ -76,7 +100,7 @@ const Header = () => {
     //    }
 
     return <>
-    <ul className="Header">
+    <ul ref={refHeader} className="Header">
             <div ref = {refBar} id="vwordSideBar">
            
             <div className='nav-icon-link'><Link style = {linkStyle}  to='/'><h3 onClick={handleSideBar} >HOME</h3></Link></div>
@@ -92,9 +116,7 @@ const Header = () => {
         <div id="vwordMenu">
             <h2>vWord </h2>
         </div>
-        <div id="vwordMenu">
-            <h2> </h2>
-        </div>
+        <div ref={refPostIc} onClick={createPostPage} id="vWordCreatePostBtn">+</div>
         
        
     </ul>

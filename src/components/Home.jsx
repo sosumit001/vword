@@ -25,12 +25,6 @@ const Home = () => {
     return (
         <div id="Home">
         <div id="vwordIntroPage">
-       <div id="vWordSlogn">
-        
-{/* <span id="vwordWritePost">
-<Button onWriteBtnClick = {handlePubishPage} bgColor="rgba(12, 12, 12, 0)"  value = "write"  C = "#111" W = "70px" H = "40px"/>
-</span> */}
-       </div>
         </div>
         <div ref={createRef} id="createPageContainer">
             <div id="c_pageNavigator"> 

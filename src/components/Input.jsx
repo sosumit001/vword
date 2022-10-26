@@ -11,18 +11,11 @@ const Input = (props) => {
 
     // useState-1 inorder to store numbers
    
-  
-   
-
-
-
-  
-   
 
     return (
         <>
         <div id="addAfterEffect">
-        <textarea spellCheck="false" placeholder="write......"   id={props.inputId} ></textarea>
+        <textarea ref={props.inRef} spellCheck="false" placeholder="write......"   id={props.inputId} ></textarea>
         </div>
         </>
     )

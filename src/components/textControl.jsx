@@ -1,9 +1,8 @@
 import React,{useEffect,useState,useRef} from "react";
 
-import { Link } from "react-router-dom";
+
 import '../components/textControl.css'
 
-import Input from "./Input";
 import Button from "./Button";
 import { Image } from "./Image";
 
@@ -12,12 +11,14 @@ import black_1 from './wallpapers/t-black-1.png'
 import white_2 from './wallpapers/t-white-2.png'
 import white_3 from './wallpapers/t-white-3.png'
 import night_1 from './wallpapers/t-night-1.jpg';
+import arrowRight from './wallpapers/arrow_right_alt.svg';
+
 //icons
 
 import textEditIcon from './icons/text-edit.svg';
 
 
- const TextControl = () => {
+ const TextControl = (props) => {
 
  
     
@@ -81,13 +82,11 @@ import textEditIcon from './icons/text-edit.svg';
     return (
        
 
-        <> {/* input Box  */}
+        <> 
         
        
         <div id="writePostPage">
-             {/* <Button value = 'download' onWriteBtnClick= {downloadImg} /> */}
-       
-        {/* <Button onWriteBtnClick = {downloadImg} W = '80px' value = 'download'/> */}
+
         <div className="inputStylecontainer">
         <TextPropsContainer setFontS = {setFontStyle}/>
         </div>
@@ -95,13 +94,14 @@ import textEditIcon from './icons/text-edit.svg';
     <div onClick={()=>{textEditIconRef.current.style.display = 'none'}} id="textDisplayContainer" >
 
     <img alt="defaultImg" className="wall-rel-bg"  style={{"width": "100%"}} />
-         <div onMouseLeave={()=>{
-            textEditIconRef.current.style.display = 'none';
+
+<div onMouseLeave={()=>{
+    textEditIconRef.current.style.display = 'none';
          }} onMouseOver={()=>{textEditIconRef.current.style.display = 'flex'}} ref={coverDisplayText} id="coverDisplayText"    onTouchStart={handleTextMovement} onMouseDown={handleTextMovement}>
 
             <span style={_displayFontStyle}  className="enableTextBoundary" id="dispTextArea">
-            there are million place in this world<br></br>
-but your heart is the only safe space I know</span>
+                
+            </span>
 
            <div ref={textEditIconRef} id ="tControlIcons">
             <img  id="textEditIcon" style={{"display":"none"}} onClick={handleTextDisplay} width='30' src={textEditIcon} alt="edit" />
@@ -163,7 +163,7 @@ const TextPropsContainer = (props) => {
             textSpace.current.style.display = 'flex';
             fontFRef.current.style.display = 'none';
         }} className="fontReturnArrow">
-        <Arrow/>
+        <img style={{"transform":"rotate(180deg)"}} src={arrowRight} alt="back" />
         </div>
     <div>
       {
@@ -233,22 +233,7 @@ const WallpaperSpace = (props) => {
     )
 }
 
-const Arrow = (props) => {
 
-    return (
-        <Link to={props.To}>
-        <div  className = 'goToHome'>
-  <div className = 'arrow-head'>
-    <div></div>
-    <div></div>
-  </div>
-  <div className = 'arrow-line'>
-    
-  </div>
-</div>
-        </Link>
-    )
-}
 
 const FontFamily = (props) => {
 

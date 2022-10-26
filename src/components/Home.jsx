@@ -5,15 +5,15 @@ import './Home.css';
 import Button from "./Button";
 import Input from "./Input";
 import { useRef } from "react";
-
-import NavigateArrow from '../components/icons/arrow_right_alt.svg'
-
 import { TextControl } from "./textControl";
+
 
 const Home = () => {
    
     
     const createRef = useRef();
+    const inputRef = useRef();
+    const CWDisplay = useRef();
 
     // function handlePubishPage(){
     //     var Header = document.querySelector('.Header');
@@ -21,16 +21,26 @@ const Home = () => {
     //     createRef.current.style.display= 'block';
     //     if(Header) Header.style.display = 'none';
     // }
+    function showPublishPage(){
+       let vTxt = document.querySelector('.enableTextBoundary');
+       let textValue = inputRef.current.value;
+
+       if(textValue.length > 4)
+       {
+        CWDisplay.current.style.left = "-50%";
+        vTxt.innerHTML = textValue;
+       }
+    }
 
     return (
         <div id="Home">
         <div id="vwordIntroPage">
         </div>
         <div ref={createRef} id="createPageContainer">
-            <TextControl/>
-            <div id="createWriteDisplay">
-            <Input/>
-            <Button value = "next" W="60px" H="40px" />
+            <TextControl  />
+            <div ref={CWDisplay} id="createWriteDisplay">
+            <Input inRef = {inputRef} />
+            <Button onWriteBtnClick = {showPublishPage} value = "next" W="60px" H="40px" />
             </div>
         </div>
         </div>

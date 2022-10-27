@@ -51,6 +51,15 @@ textarea {
     width: 80%;
 }
 
+#textScale{
+    position: absolute;
+    top:105%;
+    left: 70%;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transform: scale(0);
+    transition: 300ms;
+}
 
 
 

@@ -1,6 +1,6 @@
 {
-  "homepage": "http://sosumit001.github.io/vword",
   "name": "vword",
+  "homepage": "http://sosumit001.github.io/vword",
   "version": "0.1.0",
   "private": false,
   "dependencies": {

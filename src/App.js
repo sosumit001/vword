@@ -18,10 +18,10 @@ function App() {
    <div className='App'>
   <Header/>
     <Routes>
-      <Route path='/' element = {<Home/>}></Route>
-      <Route path='/build' element={<TextControl/>}/>
-      <Route path='/profile' element={<Profile/>}/>
-      <Route path='/abou' element={<div>hello</div>}/>
+      <Route exact path='/vword' element = {<Home/>}></Route>
+      <Route path='/vword/build' element={<TextControl/>}/>
+      <Route path='/vword/profile' element={<Profile/>}/>
+      <Route path='/vword/about' element={<div>hello</div>}/>
     </Routes>
     </div>
  

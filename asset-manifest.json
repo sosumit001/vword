@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/vword/static/css/main.5cba5e2d.css",
-    "main.js": "/vword/static/js/main.c1237635.js",
+    "main.js": "/vword/static/js/main.465550d9.js",
     "static/media/t-black-1.png": "/vword/static/media/t-black-1.0788c0f22cc504f0ec83.png",
     "static/media/t-white-2.png": "/vword/static/media/t-white-2.7e04ad2f63e99e8b3586.png",
     "static/media/t-white-3.png": "/vword/static/media/t-white-3.a10decb4593c186df527.png",
@@ -12,10 +12,10 @@
     "static/media/text-edit.svg": "/vword/static/media/text-edit.a1c71fe4bc4fbc1266b7a451853f42eb.svg",
     "static/media/arrow_right_alt.svg": "/vword/static/media/arrow_right_alt.8272589614ba1980d393a6161dc5dfb0.svg",
     "main.5cba5e2d.css.map": "/vword/static/css/main.5cba5e2d.css.map",
-    "main.c1237635.js.map": "/vword/static/js/main.c1237635.js.map"
+    "main.465550d9.js.map": "/vword/static/js/main.465550d9.js.map"
   },
   "entrypoints": [
     "static/css/main.5cba5e2d.css",
-    "static/js/main.c1237635.js"
+    "static/js/main.465550d9.js"
   ]
 }

@@ -103,9 +103,9 @@ const Header = () => {
     <ul ref={refHeader} className="Header">
             <div ref = {refBar} id="vwordSideBar">
            
-            <div className='nav-icon-link'><Link style = {linkStyle}  to='/vword'><h3 onClick={handleSideBar} >HOME</h3></Link></div>
-            <div className='nav-icon-link'><Link style = {linkStyle}  to='/vword/profile'><h3 onClick={handleSideBar} >PROFILE</h3></Link></div>
-            <div className='nav-icon-link'><Link style = {linkStyle}  to='/vword/about'><h3>ABOUT</h3></Link></div>
+            <div className='nav-icon-link'><Link style = {linkStyle}  to='/'><h3 onClick={handleSideBar} >HOME</h3></Link></div>
+            <div className='nav-icon-link'><Link style = {linkStyle}  to='/profile'><h3 onClick={handleSideBar} >PROFILE</h3></Link></div>
+            <div className='nav-icon-link'><Link style = {linkStyle}  to='/about'><h3>ABOUT</h3></Link></div>
         </div>
       
         <div onClick={handleSideBar} id="vwordMenu">

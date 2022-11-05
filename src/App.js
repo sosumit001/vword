@@ -20,7 +20,7 @@ function App() {
     <Routes>
       <Route path='/vword' element = {<Home/>}></Route>
       <Route path='/vword/build' element={<TextControl/>}/>
-      <Route path='/word/vprofile' element={<Profile/>}/>
+      <Route path='/vword/profile' element={<Profile/>}/>
       <Route path='/vword/about' element={<div>hello</div>}/>
     </Routes>
     </div>

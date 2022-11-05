@@ -16,6 +16,7 @@
     --HomeB: brightness(100%);
     filter: var(--HomeB);
     overflow: hidden;
+    --link-1 : rgb(255, 40, 40);
 }
 #vwordIntroPage{
     width: 100%;

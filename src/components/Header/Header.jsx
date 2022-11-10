@@ -28,10 +28,10 @@ const Header = () => {
 
     var pageURL = window.location.href;
   
-    var home = "vword.life";
-    var home_ = "vword.life/";
-    var profile = "vword.life/profile";
-    var profile_ = "vword.life/profile/";
+    var home = "http://localhost:3000/";
+    var home_ = "http://vword.life/";
+    var profile = "http://localhost:3000/profile";
+    var profile_ = "http://vword.life/profile/";
     
 
    let linkC = [

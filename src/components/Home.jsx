@@ -15,12 +15,6 @@ const Home = () => {
     const inputRef = useRef();
     const CWDisplay = useRef();
 
-    // function handlePubishPage(){
-    //     var Header = document.querySelector('.Header');
-    
-    //     createRef.current.style.display= 'block';
-    //     if(Header) Header.style.display = 'none';
-    // }
     function showPublishPage(){
        let vTxt = document.querySelector('.enableTextBoundary');
        let textValue = inputRef.current.value;

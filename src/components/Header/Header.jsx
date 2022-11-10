@@ -144,7 +144,7 @@ const Header = () => {
             <div className="menu-bars"></div>
             <div className="menu-bars"></div>
         </div>
-        <div id="vwordMenu">
+        <div >
             <h2> </h2>
         </div>
         <div ref={refPostIc} onClick={createPostPage} id="vWordCreatePostBtn">+</div>

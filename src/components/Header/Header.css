@@ -105,7 +105,7 @@
   gap:14%;
   border-radius: 50%;
 
-
+  z-index: 4000;
 }
 
 .menu-bars{
@@ -137,7 +137,7 @@
  
   height: 2px;
   width: 80%;
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(209, 57, 57);
   transition: 300ms;
  
 }
